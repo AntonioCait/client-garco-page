@@ -1,124 +1,139 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Image from 'next/image';
+import hero from './assets/img1.png';
+import hero2 from './assets/img2.png';
+import grid1 from './assets/img3.png';
+import grid2 from './assets/img4.png';
+import grid3 from './assets/img5.png';
+import grid4 from './assets/img6.png';
+import grid5 from './assets/img7.png';
+import grid6 from './assets/img8.png';
+import MainContent from './components/MainContent';
+import Content from './components/Content';
+import { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] })
+const gridImages = [
+	{
+		id: 1,
+		image: grid1,
+	},
+	{
+		id: 2,
+		image: grid2,
+	},
+	{
+		id: 3,
+		image: grid3,
+	},
+	{
+		id: 4,
+		image: grid4,
+	},
+	{
+		id: 5,
+		image: grid5,
+	},
+	{
+		id: 6,
+		image: grid6,
+	},
+];
+
+// metadata
+export const metadata: Metadata = {
+	title: 'Inicio - Persianas Garco',
+	description:
+		'¿Quieres renovar la decoración de tu hogar? En nuestra tienda contamos con una amplia variedad de productos, desde persianas y cortinas hasta toldos y papel tapiz de todo tipo, para facilitarte la tarea. Además, todos nuestros productos están garantizados para ofrecerte la tranquilidad de que estás haciendo una inversión segura. Descubre nuestra selección y encuentra lo que necesitas para darle un nuevo estilo a tu hogar.',
+};
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+	return (
+		<>
+			<MainContent
+				sectionClass="hero py-20 max-w-6xl
+				m-auto
+				px-4
+				xl:px-6"
+				contentPositionClass="container grid lg:grid-cols-2 justify-center items-center gap-4 grip-cols-1"
+				leftBoxClass="left-box"
+				titleClass="text-4xl font-bold text-garco-text-black"
+				titleText="PERSIANAS GARCO"
+				paragraphClass="text-lg font-light mt-4"
+				paragraphText="Si estás buscando darle un nuevo estilo a tu hogar, nosotros te facilitamos la decoración. Contamos con una amplia variedad de productos, incluyendo persianas, cortinas, toldos y papel tapiz de todo tipo. Todos nuestros productos están garantizados, para que tengas la tranquilidad de que estás haciendo una inversión segura."
+				rightBoxClass="right-box justify-self-center sm:p-4 md:p-8 lg:p-12 lg:justify-self-end"
+				figureClass="hero-img drop-shadow-2xl"
+				imageClass="drop-shadow-2xl mt-4"
+				image={hero}
+			/>
+			<Content
+				sectionClass="hero py-20 bg-garco-blue w-full"
+				contentPositionClass="
+				container 
+				flex
+				flex-col
+				justify-center
+				items-center
+				lg:flex-row-reverse
+				lg:justify-between
+				lg:items-center			
+				gap-4
+				grip-cols-1
+				m-auto max-w-6xl
+				px-4
+				xl:px-6
+				text-lg
+				font-light
+				mt-4"
+				leftBoxClass="left-box lg:w-1/2"
+				titleClass="text-4xl font-bold text-white"
+				titleText="Productos y Servicios"
+				paragraphClass="text-lg font-light mt-4 text-white"
+				// paragraphText="Decora tu hogar con facilidad con persianas, cortinas, toldos y papel tapiz de todo tipo"
+				rightBoxClass="right-box justify-self-center sm:p-4 md:p-8 lg:p-12 lg:justify-self-end lg:w-1/2"
+				figureClass="hero-img drop-shadow-2xl"
+				imageClass="drop-shadow-2xl mt-4"
+				image={hero2}
+			/>
+			{/* grid of images */}
+			<section>
+				<div className="title-container max-w-5xl m-auto p-8 mt-12 ">
+					<h3
+						className="
+					text-4xl
+					font-bold
+					text-center
+					text-garco-text-black
+					"
+					>
+						Productos
+					</h3>
+				</div>
+				<div className="grid-container max-w-4xl m-auto py-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 px-4">
+					{gridImages.map((image) => (
+						<figure
+							key={image.id}
+							className="grid-item 
+							justify-self-center
+							w-full
+							h-full
+							lg:p-1
+						"
+						>
+							<Image
+								className="
+							drop-shadow-2xl
+							w-full
+							h-full
+							justify-self-center
+							"
+								src={image.image}
+								alt="Persianas"
+								width={500}
+								height={500}
+							/>
+						</figure>
+					))}
+				</div>
+			</section>
+		</>
+	);
 }

@@ -1,0 +1,35 @@
+.navGrid {
+	width: 100%;
+	background-color: var(--garco-blue);
+	padding: 1rem 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.navContainerGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.navLeft {
+	display: flex;
+	align-items: center;
+}
+
+.navRight {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 1rem;
+	color: var(--garco-text-white);
+}
+
+/* when hover over links increase weight without moving positions */
+
+.navLinks:hover {
+	border: 1px solid var(--garco-text-white);
+	transition: border 0.2s ease-in-out;
+}
