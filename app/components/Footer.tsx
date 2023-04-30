@@ -4,7 +4,7 @@ import Link from 'next/link';
 import logo from '../assets/garcoLogo.png';
 import { ILinks } from '../typings/types';
 // AiOutlineInstagram
-import { AiOutlineInstagram } from 'react-icons/ai';
+import { AiOutlineInstagram, AiFillFacebook } from 'react-icons/ai';
 
 function Footer() {
 	// links
@@ -52,6 +52,9 @@ function Footer() {
 					>
 						<a href="https://www.instagram.com/garco.persianas.trc/" target="_blank">
 							<AiOutlineInstagram className="text-white text-4xl" />
+						</a>
+						<a href="https://www.facebook.com/garco.persianas.trc" target="_blank">
+							<AiFillFacebook className="text-white text-4xl" />
 						</a>
 					</div>
 					<div

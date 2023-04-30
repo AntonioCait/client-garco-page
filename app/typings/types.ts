@@ -16,3 +16,17 @@ export interface IContent {
 	imageClass: string;
 	image: any;
 }
+
+export interface IContentContact {
+	sectionClass: string;
+	contentPositionClass: string;
+	leftBoxClass: string;
+	titleClass: string;
+	titleText: string;
+	paragraphClass: string;
+	paragraphText?: string;
+	rightBoxClass: string;
+	figureClass?: string;
+	imageClass?: string;
+	image?: any;
+}
